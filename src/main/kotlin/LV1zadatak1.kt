@@ -5,7 +5,7 @@ fun main(){
 
     //Igra jamba
 
-    var hand1 = Hand()
+    var player = Player()
     var gameIsOn = true
     var scoreHand1 = 0
     var gameValues : Int
@@ -33,15 +33,15 @@ fun main(){
 
             when(gameValues){
                 1 -> {
-                    hand1.roll()
-                    hand1.checkState()
+                    player.roll()
+                    player.checkState()
 
                     println("Unesi u spojenom formatu, znaci bez razmaka, redne brojeve kocki koje zelis zakljucati, \n" +
                             "ili ako si zakljucao vec, okljucati. Nije bitan redosljed. Npr, za zakljucavanje prve i druge \n" +
                             "kocke moze se napisati 12 ili 21, jedino bitno da se zeljeni redni broj kocke samo jednom napise. \n" +
                             "ako se ne zeli mijenjati zakljucanost niti jedne kocke, moze se samo nula upisati.")
                     dicesToBeLocked = reader.nextInt()
-                    UtilityFunctions.applyListOfDiceNumbersToBeLocked(UtilityFunctions.getNumbersFromNonSeparatedFormat(dicesToBeLocked),hand1)
+                    UtilityFunctions.applyListOfDiceNumbersToBeLocked(UtilityFunctions.getNumbersFromNonSeparatedFormat(dicesToBeLocked), player.hand)
 
 
                 }
@@ -56,7 +56,7 @@ fun main(){
 
         //pregled rezultata
 
-        when(ResultCheck.isScored(hand1)){
+        when(player.isScored()){
             1 -> {
                 scoreHand1 += 50
                 println("Dobiven je jamb, dobili ste 50 bodova, sada ukupno imate $scoreHand1 bodova")
@@ -79,7 +79,7 @@ fun main(){
 
         }
 
-        hand1.resetHand()
+        player.hand.resetHand()
 
     }
     println("Skupljeni bodovi su: $scoreHand1")

@@ -4,7 +4,8 @@ import java.util.Scanner
 fun main(){
     // Test za provjere za jamb, poker i skalu
 
-    var hand1 = Hand()
+    var player = Player()
+    var hand1 = player.hand
 
     hand1.roll()
     hand1.checkState()
@@ -18,6 +19,6 @@ fun main(){
 
     hand1.checkState()
 
-    println(ResultCheck.isScored(hand1))
+    println(player.isScored())
 
 }
