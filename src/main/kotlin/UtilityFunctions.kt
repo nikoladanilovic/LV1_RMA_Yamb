@@ -13,9 +13,9 @@ class UtilityFunctions {
         }
 
         //applies extracted numbers on dies in hand to be locked or unlocked (numbers are to be extracted by getNumbersFromNonSeparatedFormat() function)
-        fun applyListOfDiceNumbersToBeLocked(listOfNum : MutableList<Int>, hand : Hand){
+        fun applyListOfDiceNumbersToBeLocked(listOfNum : MutableList<Int>, player : Player){
             for(diceNum in listOfNum){
-                hand.lockUnlock(diceNum)
+                player.getHand().lockUnlock(diceNum)
             }
         }
     }

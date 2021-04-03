@@ -5,7 +5,7 @@ fun main(){
     // Test za provjere za jamb, poker i skalu
 
     var player = Player()
-    var hand1 = player.hand
+    var hand1 = player.getHand()
 
     hand1.roll()
     hand1.checkState()

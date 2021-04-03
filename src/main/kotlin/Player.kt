@@ -1,6 +1,6 @@
 class Player {
-    var hand : Hand
-    var results : ResultCheck
+    private var hand : Hand
+    private var results : ResultCheck
 
     constructor(){
         this.hand = Hand()
@@ -17,5 +17,13 @@ class Player {
 
     fun checkState(){
         this.hand.checkState()
+    }
+
+    fun getHand() : Hand {
+        return this.hand
+    }
+
+    fun setHand(hand1 : Hand) {
+        this.hand = hand1
     }
 }

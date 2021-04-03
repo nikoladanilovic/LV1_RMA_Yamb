@@ -41,7 +41,7 @@ fun main(){
                             "kocke moze se napisati 12 ili 21, jedino bitno da se zeljeni redni broj kocke samo jednom napise. \n" +
                             "ako se ne zeli mijenjati zakljucanost niti jedne kocke, moze se samo nula upisati.")
                     dicesToBeLocked = reader.nextInt()
-                    UtilityFunctions.applyListOfDiceNumbersToBeLocked(UtilityFunctions.getNumbersFromNonSeparatedFormat(dicesToBeLocked), player.hand)
+                    UtilityFunctions.applyListOfDiceNumbersToBeLocked(UtilityFunctions.getNumbersFromNonSeparatedFormat(dicesToBeLocked), player)
 
 
                 }
@@ -79,7 +79,7 @@ fun main(){
 
         }
 
-        player.hand.resetHand()
+        player.getHand().resetHand()
 
     }
     println("Skupljeni bodovi su: $scoreHand1")
