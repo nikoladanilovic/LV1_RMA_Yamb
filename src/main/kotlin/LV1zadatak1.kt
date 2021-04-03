@@ -21,7 +21,7 @@ fun main(){
             "koje zeli vrijednosti kocke ocuvati, kako bi dobio zeljene kombinacije.")
 
     while(gameIsOn){
-        println("\nNOVA RUNDA!!")
+        println("\nNOVA RUNDA!!!")
         println("/////////////////////////////////////////////////////////\n\n")
 
         for(gameIteratorValue in 1..3){     //Jedna runda igre (naizmjenicna igra dva igraca)
